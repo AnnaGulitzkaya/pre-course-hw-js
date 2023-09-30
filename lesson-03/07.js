@@ -4,7 +4,5 @@ const numbers = [
     [111, 200, 333, 400, 555],
 ];
 
-const newNumbers = numbers.map(row => {
-    row.map(el => el % 2 === 0 ? el: null).filter(el => el !== null);
-});
+const newNumbers = numbers.map(row => row.slice().map(num => num % 2 === 0 ? num : null).filter(num => num !== null));
 console.log(newNumbers);
