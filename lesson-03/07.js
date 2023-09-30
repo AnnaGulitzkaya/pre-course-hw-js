@@ -5,6 +5,6 @@ const numbers = [
 ];
 
 const newNumbers = numbers.map(row => {
-    row.map(el => el % 2 === 0 ? el: 0)
+    row.map(el => el % 2 === 0 ? el: null).filter(el => el !== null);
 });
 console.log(newNumbers);
